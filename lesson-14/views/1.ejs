@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <%=name%>
+    <% for(var i=0;i<arr.length;i++){ %>
+        <div><%=arr[i] %></div>
+    <%}%> 
+
+    <%=13%>+<%=14%>
+
+    <%
+        var str = "<div>转义</div>";
+    %>
+    <!-- 转义 -->
+    <%-str%>
+    
+    <!-- include 后面是定死的，写的啥就引啥，不能是变量 -->
+    <% include a.txt %>
+
+    <% for(var i=0;i<arr.length;i++){ %>
+        <% include a.txt %>
+    <%}%> 
+
+    <!-- 长代码好恶心啊 -->
+    <%if(type=='admin') {%>
+    <%include ../style/admin.css%>
+    <%}else{%>
+    <%include ../style/user.css%>
+    <%}%>
+
+</body>
+</html>
