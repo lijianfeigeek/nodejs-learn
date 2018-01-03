@@ -14,6 +14,7 @@ const multer        = require('multer');
 
 const consolidate = require('consolidate');
 const mysql = require('mysql');
+const common= require('./libs/common')
 
 // 连接池
 const db = mysql.createPool({
@@ -108,6 +109,7 @@ server.get('/article',(req,res,next)=>{
                     res.status(404).send('请求的文章找不到').end();
                 }else{
                     var article_data = data[0];
+                    article_data.oDate = common.time2date(article_data.post_time);
                     article_data.content = article_data.content.replace(/^/gm,'<p>').replace(/^/gm,'<p>'); 
                     res.render('conText.ejs',{article_data})
                 }
