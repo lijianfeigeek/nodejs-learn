@@ -1,0 +1,27 @@
+{
+  "name": "lesson",
+  "version": "1.0.0",
+  "description": "lesson",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "lijianfei",
+  "license": "MIT",
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-encrypter": "^0.2.3",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.3",
+    "express": "^4.16.2",
+    "express-static": "^1.2.5"
+  }
+}
